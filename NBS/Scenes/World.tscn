@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://c73fbe45s6i4d"]
+
+[ext_resource type="Script" path="res://Scripts/World.gd" id="1_fd8hh"]
+[ext_resource type="PackedScene" uid="uid://b4fndmonnv64v" path="res://Scenes/Player.tscn" id="1_juubk"]
+[ext_resource type="Texture2D" uid="uid://6rmvpqi0tqx3" path="res://Assets/TestTileMap.png" id="3_emhd0"]
+[ext_resource type="PackedScene" uid="uid://dsp1075nfevyd" path="res://Scenes/Collectible.tscn" id="4_qi1cx"]
+[ext_resource type="Resource" uid="uid://c8y8ak6skii5o" path="res://Resources/Items/TestTool.tres" id="5_b25j3"]
+[ext_resource type="Resource" uid="uid://chjp2q47gc1yx" path="res://Resources/Items/Test.tres" id="6_v3uv6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sj1p"]
+texture = ExtResource("3_emhd0")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_iaodh"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_7sj1p")
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_fd8hh")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_juubk")]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource("TileSet_iaodh")
+format = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" parent="." instance=ExtResource("4_qi1cx")]
+position = Vector2(135, 32)
+item = ExtResource("5_b25j3")
+quantity = 1
+
+[node name="Area2D2" parent="." instance=ExtResource("4_qi1cx")]
+position = Vector2(219, 29)
+item = ExtResource("6_v3uv6")
+quantity = 20

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://c8y8ak6skii5o"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Tool.gd" id="1_6vjbp"]
+[ext_resource type="Texture2D" uid="uid://bmwpb0umrie50" path="res://Assets/PickAxe.png" id="2_li6rq"]
+
+[resource]
+script = ExtResource("1_6vjbp")
+name = "TestTool"
+description = ""
+texture = ExtResource("2_li6rq")
+max_quantity = 1

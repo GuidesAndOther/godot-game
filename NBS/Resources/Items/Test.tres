@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://chjp2q47gc1yx"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/Item.gd" id="1_h3yid"]
+[ext_resource type="Texture2D" uid="uid://dpnd5o030fi6x" path="res://Assets/Stone.png" id="2_qb5sh"]
+
+[resource]
+script = ExtResource("1_h3yid")
+name = "Test"
+description = "Test item"
+texture = ExtResource("2_qb5sh")
+max_quantity = 15

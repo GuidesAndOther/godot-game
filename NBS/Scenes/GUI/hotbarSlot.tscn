@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2otsc0m6ctdb"]
+
+[ext_resource type="PackedScene" uid="uid://qqfaeplp3r8s" path="res://Scenes/GUI/slot.tscn" id="1_0ctnr"]
+[ext_resource type="Script" path="res://Scripts/HotbarSlot.gd" id="2_yxtx1"]
+
+[node name="Slot" instance=ExtResource("1_0ctnr")]
+script = ExtResource("2_yxtx1")
